@@ -17,14 +17,16 @@
     
     <div>
         <h2>Today's activity was started at {{date}}. </h2>
-        <h2>Activity tracking is currently {{st}}.</h2>
+        <h2>Activity tracking is completed. Total event time was X.</h2>
         <img src="/print-plot" alt="my plot">
-        <img src="/print-acc" alt="my accel plot">
-        <img src="/gps-plot" alt="my plot2">
-        
+        <div>
+            <img src="/gps-plot" alt="my plot2">
+            <input class="button" type="submit" value="Track user" name="track"/>
+            <input class="button" type="submit" value="Track total ride" name="total"/>
+        </div>
         <h2>Time elapsed since starting is {{current_time}}</h2>
-        <h2>Average speed is {{avg | round(2, 'floor')}} mph.</h2>
-        <h2>Max speed is {{max | round(2, 'floor')}} mph.</h2>
+        <h2>Average speed is {{avg}} mph.</h2>
+        <h2>Max speed is {{max}} mph.</h2>
         <h2>Total distance travelled is {{distance | round(2, 'floor')}} miles.</h2>
         <h2>Current altitude is {{alt}} feet ASL.</h2>
         <h2>Curerent temperature is {{temp}} degrees Fahrenheit.</h2>
